@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Dashboard from './admin/Dashboard';
 import Appointment from './components/Appointment';
-import VisitorDashboard from './components/appointment/VisitorDashboard';
 import Signup from './components/Signup';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -17,6 +16,7 @@ import MyTestResults from './components/MyTestResults';
 import AllTestResults from './admin/AllTestResults';
 import AdminLogin from './admin/Login';
 import { useCookies } from 'react-cookie';
+import UserDashboard from './components/appointment/Dashboard';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<VisitorDashboard />} />
+          <Route path="/dashboard" element={<UserDashboard />} />
           <Route path="/registration" element={<Signup />} />
 
           
