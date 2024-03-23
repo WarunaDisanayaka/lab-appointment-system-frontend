@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#00264d'}}>
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#476cb8'}}>
         <div className="container">
           <a className="navbar-brand" href="/">
             <h1>
-                MediLab
+                SYNLAB
             </h1>
           </a>
           <button
@@ -155,7 +155,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="sticky-footer bg-dark text-white py-3" >
+      <footer className="sticky-footer bg-dark text-white py-3" style={{backgroundColor: '#00264d'}}>
         <div className="container text-center" style={{backgroundColor: '#00264d'}}>
           <span>Medi lab Medical laboratary &copy; 2023</span>
         </div>
