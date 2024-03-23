@@ -1,0 +1,97 @@
+.navbar-dark .nav-item .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+    color: #fff;
+  }
+  
+  .fa-li {
+    position: relative;
+    left: 0;
+  }
+  
+  .navbar {
+    background-color:#015fe1;
+  }
+  
+  
+  .card{
+    margin-bottom: 8%;
+    
+  }
+  
+  .card-img-top{
+    height: 150px; 
+    object-fit: cover; 
+    width: 100%;
+  }
+  
+  
+  
+  /* registration form */
+  
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #156427; /* Set your desired text color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .modern-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+  }
+  
+  label {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  span {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-color: #3498db;
+  }
+  
+  button {
+    background-color: #da0505;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  
+   .form-group{
+    margin-left: 35rem;
+    margin-right:35rem;
+    margin-bottom: 1rem;
+  }
