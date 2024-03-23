@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import axios from 'axios';
 import { useLocation } from 'react-router';
 import Cookies from 'js-cookie'; 
+import Sidebar from './appointment/Dashboard';
 
 function MyAppointments() {
   const [appointments, setAppointments] = useState([]);
@@ -53,8 +54,8 @@ function MyAppointments() {
 
   return (
     <div className="d-flex">
-      <div>
-      </div>
+      {/* Include Sidebar component */}
+      <Sidebar />
       <div className="flex-grow-1">
         <div className="p-4 mt-5">
           <h2>Appointments</h2>

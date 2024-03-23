@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useLocation } from 'react-router';
+import Sidebar from './appointment/Dashboard'; // Import Sidebar component
 
 function MyTestResults() {
   const [testResults, setTestResults] = useState([]);
@@ -23,30 +24,34 @@ function MyTestResults() {
   }, [userId]); // Fetch test results whenever userId changes
 
   return (
-    <div className="p-4 mt-5">
-      <h2>My Test Results</h2>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Test Name</th>
-            <th>Result</th>
-          </tr>
-        </thead>
-        <tbody>
-          {testResults.length > 0 ? (
-            testResults.map(testResult => (
-              <tr key={testResult.testResultId}>
-                <td>{testResult.testName}</td>
-                <td>{testResult.result}</td>
-              </tr>
-            ))
-          ) : (
+    <div className="d-flex">
+      {/* Include Sidebar component */}
+      <Sidebar />
+      <div className="flex-grow-1 p-4 mt-5">
+        <h2>My Test Results</h2>
+        <Table striped bordered hover>
+          <thead>
             <tr>
-              <td colSpan="2">No test results available</td>
+              <th>Test Name</th>
+              <th>Result</th>
             </tr>
-          )}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {testResults.length > 0 ? (
+              testResults.map(testResult => (
+                <tr key={testResult.testResultId}>
+                  <td>{testResult.testName}</td>
+                  <td>{testResult.result}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="2">No test results available</td>
+              </tr>
+            )}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 }
