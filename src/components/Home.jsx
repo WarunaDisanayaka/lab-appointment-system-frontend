@@ -67,19 +67,20 @@ export default function Home() {
 
       {/* Carousel */}
       <Carousel showThumbs={false}>
-        <div>
-          <img src="https://www.mic-mainz.de/wp-content/uploads/2023/07/MIC_Webbanner_2000x700px.jpg" alt="Image 1" />
-          <p className="legend"><h4>Welcome to Medilab! We are a state-of-the-art laboratory dedicated to providing accurate and reliable testing services. </h4></p>
-        </div>
-        <div>
-          <img src="https://www.mic-mainz.de/wp-content/uploads/2023/07/MIC_Web-Banner_Lab_140623_2000x700.jpg" alt="Image 2" />
-          <p className="legend"><h4>Our team of experienced professionals utilizes cutting-edge technology to deliver precise results for various industries and applications.</h4></p>
-        </div>
-        <div>
-          <img src="https://www.mic-mainz.de/wp-content/uploads/2023/07/MIC_Webbanner_2000x700px.jpg" alt="Image 3" />
-          <p className="legend">Make your apointment now!</p>
-        </div>
-      </Carousel>
+  <div>
+    <img src="https://online.nmu.edu/wp-content/uploads/2021/09/NMU_Should-I-Get-a-Medical-Laboratory-Science-Degree.jpg.webp" alt="Image 1" style={{ width: "100%", height: "50%" }} />
+    <p className="legend"><h4>Welcome to Medilab! We are a state-of-the-art laboratory dedicated to providing accurate and reliable testing services. </h4></p>
+  </div>
+  <div>
+    <img src="https://college.mayo.edu/media/mccms/content-assets/academics/health-sciences-training/medical-laboratory-science-florida-and-minnesota/curriculum/mccms-medical-lab-science-program-3396025-0004-hero-tablet.jpg" alt="Image 2" style={{ width: "100%", height: "50%" }} />
+    <p className="legend"><h4>Our team of experienced professionals utilizes cutting-edge technology to deliver precise results for various industries and applications.</h4></p>
+  </div>
+  <div>
+    <img src="https://www.mic-mainz.de/wp-content/uploads/2023/07/MIC_Webbanner_2000x700px.jpg" alt="Image 3" style={{ width: "100%", height: "50%" }} />
+    <p className="legend">Make your appointment now!</p>
+  </div>
+</Carousel>
+
 
       {/* Explore Advertisements */}
       <div className="text-center mt-4">
