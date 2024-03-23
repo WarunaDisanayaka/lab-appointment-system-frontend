@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useLocation } from 'react-router';
+import Sidebar from './appointment/Dashboard';
 
 function MyReports() {
   const [filePaths, setFilePaths] = useState([]);
@@ -25,34 +26,38 @@ function MyReports() {
   }, [userId]); // Fetch reports whenever userId changes
 
   return (
-    <div className="p-4 mt-5">
-      <h2>My Reports</h2>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>File Name</th>
-            <th>Download Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filePaths.length > 0 ? (
-            filePaths.map((filePath, index) => (
-              <tr key={index}>
-                <td>{fileNames[index]}</td>
-                <td>
-                  <a href={`http://localhost:8080/${filePath}`} download>
-                    Download
-                  </a>
-                </td>
-              </tr>
-            ))
-          ) : (
+    <div className="d-flex">
+      {/* Include Sidebar component */}
+      <Sidebar />
+      <div className="flex-grow-1 p-4 mt-5">
+        <h2>My Reports</h2>
+        <Table striped bordered hover>
+          <thead>
             <tr>
-              <td colSpan="2">No reports available</td>
+              <th>File Name</th>
+              <th>Download Link</th>
             </tr>
-          )}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {filePaths.length > 0 ? (
+              filePaths.map((filePath, index) => (
+                <tr key={index}>
+                  <td>{fileNames[index]}</td>
+                  <td>
+                    <a href={`http://localhost:8080/${filePath}`} download>
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="2">No reports available</td>
+              </tr>
+            )}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 }

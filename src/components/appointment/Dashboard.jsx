@@ -1,10 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import './dashboard.css';
 
 const UserDashboard = () => {
-  const [, , removeCookie] = useCookies(['patientId']);
+  const [cookies, , removeCookie] = useCookies(['patientId']);
+
+  useEffect(() => {
+    // Check if 'patientId' cookie exists
+    if (!cookies.patientId) {
+      // Redirect the user to the login page if 'patientId' cookie is not available
+      window.location.replace('/login');
+    }
+  }, [cookies.patientId]); // Trigger effect whenever 'patientId' cookie changes
+
   const handleLogout = () => {
     // Remove the 'patientId' cookie
     removeCookie('patientId', { path: '/' });
@@ -23,7 +32,6 @@ const UserDashboard = () => {
           <button onClick={handleLogout} className="logout-btn">Logout</button>
         </div>
       </div>
-      
     </div>
   );
 };
